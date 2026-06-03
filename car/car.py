@@ -22,7 +22,11 @@ class Car:
 def test_car():
     print("=== Car Acceleration and Brake Test ===\n")
     my_car = Car(2022, "Toyota")
-    print("Car created")
+
+    print("Accelerating 5 times:")
+    for i in range(5):
+        my_car.accelerate()
+        print(f"  After accelerate #{i+1}: speed = {my_car.get_speed()} km/h")
 
 if __name__ == "__main__":
     test_car()
