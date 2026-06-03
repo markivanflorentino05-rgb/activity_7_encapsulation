@@ -19,8 +19,19 @@ class Fan:
         return self.__on
 
     def set_speed(self, speed):
-        self.__speed = speed
+        if speed in (Fan.SLOW, Fan.MEDIUM, Fan.FAST):
+            self.__speed = speed
+        else:
+            print("Error: Speed must be Fan.SLOW, Fan.MEDIUM, or Fan.FAST")
+
     def set_radius(self, radius):
-        self.__radius = radius
+        if radius > 0:
+            self.__radius = radius
+        else:
+            print("Error: Radius must be positive")
+
     def set_color(self, color):
-        self.__color = color
+        if isinstance(color, str) and color.strip():
+            self.__color = color
+        else:
+            print("Error: Color must be a non-empty string")
