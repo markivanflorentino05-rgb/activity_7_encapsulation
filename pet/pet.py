@@ -11,7 +11,11 @@ class Pet:
         self.__animal_type = animal_type
 
     def set_age(self, age):
-        self.__age = age
+        if age >= 0:
+            self.__age = age
+        else:
+            print("Warning: Age set to 0 (negative not allowed)")
+            self.__age = 0
 
     def get_name(self):
         return self.__name
