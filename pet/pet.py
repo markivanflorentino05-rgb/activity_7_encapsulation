@@ -34,7 +34,11 @@ def test_pet():
     user_type = input("Enter pet's animal type (e.g., Dog, Cat, Bird): ")
     user_age = int(input("Enter pet's age: "))
 
-    print("Input received")
+    my_pet.set_name(user_name)
+    my_pet.set_animal_type(user_type)
+    my_pet.set_age(user_age)
+
+    print("Pet data stored")
 
 if __name__ == "__main__":
     test_pet()
