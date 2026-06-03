@@ -25,3 +25,11 @@ class Pet:
 
     def get_age(self):
         return self.__age
+
+def test_pet():
+    print("=== Pet Information Program ===\n")
+    my_pet = Pet()
+    print("Pet object created")
+
+if __name__ == "__main__":
+    test_pet()
