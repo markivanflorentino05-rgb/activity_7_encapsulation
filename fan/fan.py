@@ -55,8 +55,16 @@ class Fan:
 def test_fan():
     print("=== Fan Test Program ===\n")
     fan1 = Fan(speed=Fan.FAST, radius=10.0, color="yellow", on=True)
-    print("Fan 1 created")
-    print(fan1.display())
+    fan2 = Fan(speed=Fan.MEDIUM, radius=5.0, color="blue", on=False)
+
+    print("Fan 1 details:", fan1.display())
+    print("Fan 2 details:", fan2.display())
+
+    print("\n--- Fan 1 via getters ---")
+    print(f"Speed: {fan1.get_speed()}")
+    print(f"Radius: {fan1.get_radius()}")
+    print(f"Color: {fan1.get_color()}")
+    print(f"On: {fan1.is_on()}")
 
 if __name__ == "__main__":
     test_fan()
