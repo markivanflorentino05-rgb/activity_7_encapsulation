@@ -28,5 +28,10 @@ def test_car():
         my_car.accelerate()
         print(f"  After accelerate #{i+1}: speed = {my_car.get_speed()} km/h")
 
+    print("\nBraking 5 times:")
+    for i in range(5):
+        my_car.brake()
+        print(f"  After brake #{i+1}: speed = {my_car.get_speed()} km/h")
+
 if __name__ == "__main__":
     test_car()
