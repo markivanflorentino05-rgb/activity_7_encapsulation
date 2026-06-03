@@ -29,7 +29,12 @@ class Pet:
 def test_pet():
     print("=== Pet Information Program ===\n")
     my_pet = Pet()
-    print("Pet object created")
+
+    user_name = input("Enter pet's name: ")
+    user_type = input("Enter pet's animal type (e.g., Dog, Cat, Bird): ")
+    user_age = int(input("Enter pet's age: "))
+
+    print("Input received")
 
 if __name__ == "__main__":
     test_pet()
