@@ -32,13 +32,21 @@ def test_pet():
 
     user_name = input("Enter pet's name: ")
     user_type = input("Enter pet's animal type (e.g., Dog, Cat, Bird): ")
-    user_age = int(input("Enter pet's age: "))
+
+    try:
+        user_age = int(input("Enter pet's age: "))
+    except ValueError:
+        print("Invalid age. Setting age to 0.")
+        user_age = 0
 
     my_pet.set_name(user_name)
     my_pet.set_animal_type(user_type)
     my_pet.set_age(user_age)
 
-    print("Pet data stored")
+    print("\n--- Your Pet Details ---")
+    print(f"Name: {my_pet.get_name()}")
+    print(f"Animal Type: {my_pet.get_animal_type()}")
+    print(f"Age: {my_pet.get_age()} years")
 
 if __name__ == "__main__":
     test_pet()
