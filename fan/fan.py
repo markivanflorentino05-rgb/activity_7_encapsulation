@@ -11,10 +11,13 @@ class Fan:
 
     def get_speed(self):
         return self.__speed
+
     def get_radius(self):
         return self.__radius
+
     def get_color(self):
         return self.__color
+
     def is_on(self):
         return self.__on
 
@@ -23,11 +26,13 @@ class Fan:
             self.__speed = speed
         else:
             print("Error: Speed must be Fan.SLOW, Fan.MEDIUM, or Fan.FAST")
+
     def set_radius(self, radius):
         if radius > 0:
             self.__radius = radius
         else:
             print("Error: Radius must be positive")
+
     def set_color(self, color):
         if isinstance(color, str) and color.strip():
             self.__color = color
@@ -36,6 +41,7 @@ class Fan:
 
     def turn_on(self):
         self.__on = True
+
     def turn_off(self):
         self.__on = False
 
@@ -45,3 +51,12 @@ class Fan:
         speed_str = speed_names.get(self.__speed, "UNKNOWN")
         return (f"Fan speed={speed_str} ({self.__speed}), radius={self.__radius}, "
                 f"color={self.__color}, state={state}")
+
+def test_fan():
+    print("=== Fan Test Program ===\n")
+    fan1 = Fan(speed=Fan.FAST, radius=10.0, color="yellow", on=True)
+    print("Fan 1 created")
+    print(fan1.display())
+
+if __name__ == "__main__":
+    test_fan()
