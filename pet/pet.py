@@ -1,3 +1,5 @@
-# pet_class/pet.py
 class Pet:
-    pass
+    def __init__(self):
+        self.__name = None
+        self.__animal_type = None
+        self.__age = None
