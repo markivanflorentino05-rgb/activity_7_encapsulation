@@ -38,3 +38,10 @@ class Fan:
         self.__on = True
     def turn_off(self):
         self.__on = False
+
+    def display(self):
+        state = "on" if self.__on else "off"
+        speed_names = {Fan.SLOW: "SLOW", Fan.MEDIUM: "MEDIUM", Fan.FAST: "FAST"}
+        speed_str = speed_names.get(self.__speed, "UNKNOWN")
+        return (f"Fan speed={speed_str} ({self.__speed}), radius={self.__radius}, "
+                f"color={self.__color}, state={state}")
