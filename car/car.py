@@ -18,3 +18,11 @@ class Car:
 
     def brake(self):
         self.__speed = max(0, self.__speed - 5)
+
+def test_car():
+    print("=== Car Acceleration and Brake Test ===\n")
+    my_car = Car(2022, "Toyota")
+    print("Car created")
+
+if __name__ == "__main__":
+    test_car()
